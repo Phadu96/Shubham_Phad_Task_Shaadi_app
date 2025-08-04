@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="no_data">#8F8F8F</color>
+
+
+    <color name="primary_500">#FF4081</color>
+    <color name="primary_700">#FF4081</color>
+    <color name="primary_light">#FF4081</color>
+    <color name="accent">#FF4081</color>
+
+    <color name="background_light">#FFFFFF</color>
+    <color name="background_grey">#F7F7F7</color>
+
+
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_label">#444444</color>
+    <color name="text_value">#111111</color>
+
+    <color name="status_pending">#FF9800</color>
+    <color name="status_accepted">#4CAF50</color>
+    <color name="status_rejected">#F44336</color>
+
+    <color name="green_500">#4CAF50</color>
+    <color name="red_500">#F44336</color>
+    <color name="blue_500">#2196F3</color>
+
+    <color name="profile_border">#757575</color>
+
+    <color name="shimmer_background">#DDDDDD</color>
+    <color name="shimmer_placeholder">#CCCCCC</color>
+
+    <color name="clr_toolbar">#152E60</color>
+
+</resources>

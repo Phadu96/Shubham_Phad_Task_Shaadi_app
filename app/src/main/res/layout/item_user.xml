@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clyMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_12sdp"
+    app:cardElevation="@dimen/_5sdp">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStatusBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_5sdp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:enabled="false"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:includeFontPadding="false"
+        android:text="@string/accepted"
+        android:textColor="@android:color/white"
+        android:visibility="visible"
+        app:backgroundTint="@color/status_accepted"
+        app:icon="@drawable/ic_accept"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.BottomRounded"
+        app:iconTint="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcvUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_12sdp"
+        app:cardElevation="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStatusBadge">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/userProfileLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageProfile"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_profile" />
+
+            <TextView
+                android:id="@+id/labelName"
+                style="@style/ProfileLabel"
+                android:text="@string/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageProfile" />
+
+            <TextView
+                android:id="@+id/valueName"
+                style="@style/ProfileValue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/labelName"
+                app:layout_constraintTop_toTopOf="@id/labelName"
+                tools:text="Full Name" />
+
+
+            <TextView
+                android:id="@+id/labelAge"
+                style="@style/ProfileLabel"
+                android:text="@string/age"
+                app:layout_constraintStart_toStartOf="@+id/labelName"
+                app:layout_constraintTop_toBottomOf="@id/labelName" />
+
+            <TextView
+                android:id="@+id/valueAge"
+                style="@style/ProfileValue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/labelAge"
+                app:layout_constraintTop_toTopOf="@id/labelAge"
+                tools:text="28" />
+
+            <TextView
+                android:id="@+id/labelGender"
+                style="@style/ProfileLabel"
+                android:text="@string/gender"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelAge" />
+
+            <TextView
+                android:id="@+id/valueGender"
+                style="@style/ProfileValue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/labelGender"
+                app:layout_constraintTop_toTopOf="@id/labelGender"
+                tools:text="Male" />
+
+            <TextView
+                android:id="@+id/labelEmail"
+                style="@style/ProfileLabel"
+                android:text="@string/email"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelGender" />
+
+            <TextView
+                android:id="@+id/valueEmail"
+                style="@style/ProfileValue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/labelEmail"
+                app:layout_constraintTop_toTopOf="@id/labelEmail"
+                tools:text="abc@gmail.com" />
+
+            <TextView
+                android:id="@+id/labelPhone"
+                style="@style/ProfileLabel"
+                android:text="@string/phone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelEmail" />
+
+            <TextView
+                android:id="@+id/valuePhone"
+                style="@style/ProfileValue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/labelPhone"
+                app:layout_constraintTop_toTopOf="@id/labelPhone"
+                tools:text="+91-9999999999" />
+
+            <TextView
+                android:id="@+id/labelLocation"
+                style="@style/ProfileLabel"
+                android:text="@string/location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelPhone" />
+
+            <TextView
+                android:id="@+id/valueLocation"
+                style="@style/ProfileValue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/labelLocation"
+                app:layout_constraintTop_toTopOf="@id/labelLocation"
+                tools:text="Mumbai" />
+
+            <TextView
+                android:id="@+id/labelNationality"
+                style="@style/ProfileLabel"
+                android:text="@string/nationality"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelLocation" />
+
+            <TextView
+                android:id="@+id/valueNationality"
+                style="@style/ProfileValue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/labelNationality"
+                app:layout_constraintTop_toTopOf="@id/labelNationality"
+                tools:text="Indian" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/actionButtons"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelNationality">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAccept"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/green_500"
+                    android:text="@string/accept"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintEnd_toStartOf="@+id/btnReject"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnReject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/red_500"
+                    android:text="@string/reject"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnAccept"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
